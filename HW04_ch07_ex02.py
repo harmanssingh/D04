@@ -21,15 +21,21 @@
 
 ###############################################################################
 # Imports
-
+import math
 
 # Body
-
+def eval_loop():
+    inputexpression=''
+    while True:
+        inputexpression=input('Enter an expression to evaluate: ')
+        if inputexpression == 'done':
+            break
+        else:
+            print(eval(inputexpression))
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
 
 if __name__ == '__main__':
     main()

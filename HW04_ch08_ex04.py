@@ -14,7 +14,8 @@
 
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
+    """The function just returns the status of the first letter in the word. It doesn't check whether there is any occurence
+    of a lowercase letter anywhere else in the word.
     """
     for c in s:
         if c.islower():
@@ -24,7 +25,8 @@ def any_lowercase1(s):
 
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """c is in 'quotes'. The function treats 'c'.islower() as : check if 'c' is lowercase, which is always true.
+    So the function would always return True irrespective of what the value for the entered string is.
     """
     for c in s:
         if 'c'.islower():
@@ -34,7 +36,7 @@ def any_lowercase2(s):
 
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """Flag is updated with each iteration. So the return value would just indicate if the last letter of the word is lowercase.
     """
     for c in s:
         flag = c.islower()
@@ -51,7 +53,8 @@ def any_lowercase4(s):
 
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """The if condition is satisfied and a False value is returned if not c.islower() is True. In other words, if there is even a single
+    capital letter in the word, the if condition would return False.
     """
     for c in s:
         if not c.islower():
@@ -66,7 +69,10 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    any_lowercase1('Hello')
+    any_lowercase2('Hello')
+    any_lowercase3('HellO')
+    any_lowercase5('Hello')
 
 
 if __name__ == '__main__':
